@@ -30,10 +30,10 @@ int main(int argc, const char * argv[])
 
 void HeapSort(vector<int> &vec)
 {
+    make_heap(vec.begin(), vec.end(), less<int>()); // 建立大顶堆,输出递增序列；
     for (int i = 0; i < vec.size(); i++)
     {
-        make_heap(vec.begin(), vec.end() - i, less<int>()); // 建立小顶堆,输出递增序列；
-        swap(vec[0], vec[vec.size() - 1 - i]); //
+        pop_heap(vec.begin(), vec.end() - i);
     }
 }
 
