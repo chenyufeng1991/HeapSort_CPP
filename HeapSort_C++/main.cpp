@@ -12,6 +12,11 @@
 
 using namespace std;
 
+/**
+ *  堆排序时间复杂度O(nlogn),空间复杂度O(1),不稳定排序
+ *
+ *  @param vec <#vec description#>
+ */
 void HeapSort(vector<int> &vec);
 
 int main(int argc, const char * argv[])
