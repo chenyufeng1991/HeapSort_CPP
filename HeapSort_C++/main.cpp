@@ -28,6 +28,13 @@ int main(int argc, const char * argv[])
     return 0;
 }
 
+/**
+ *  pop_heap()并不是真的把最大堆最小堆的元素从堆中弹出来，而是重新排序堆，把首元素和尾元素交换，然后将[first,last-1]的数据再做成一个堆。
+ 此时，原来的首元素位于迭代器end-1的位置，不再属于堆的一部分。
+ 
+ 注意:pop_heap和push_heap的操作本身就是一个调整堆的过程。
+ *
+ */
 void HeapSort(vector<int> &vec)
 {
     make_heap(vec.begin(), vec.end(), less<int>()); // 建立大顶堆,输出递增序列；
